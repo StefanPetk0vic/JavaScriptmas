@@ -1,0 +1,30 @@
+/*CSS*/
+
+.bubbles-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bubbles {
+    position: absolute;
+    pointer-events: none;
+    animation: moveBubbles ease-in-out infinite;
+    mix-blend-mode: screen;
+    opacity: 0.35;
+}
+
+@keyframes moveBubbles {
+
+    /*keyframes use transform not transmition*/
+    /*transitions  is the property and transform is the value*/
+    0% {
+        transform: translate(var(--PrevX), var(--PrevY));
+
+    }
+
+    100% {
+        transform: translate(var(--PosX), var(--PosY));
+
+    }
+}
