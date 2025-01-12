@@ -19,7 +19,7 @@ function CreateBubbles() {
     //(value between 200 and 255 for Red and Blue)
     //(green value set to 140 fixed)
     Bubbles.style.background = `radial-gradient(circle, 
-    rgba(${Math.random() * 55 + 150}, 140,${Math.random() * 55 + 150},5 ) 25.5%,
+    rgba(${Math.random() * 55 + 150}, 140,${Math.random() * 55 + 150},5 ) 15.5%,
     rgba(${Math.random() * 55 + 150}, 140,${Math.random() * 55 + 150},0 ) 40%) no-repeat`;
     //Adding bubble to list to keep track of it.
 
@@ -32,7 +32,6 @@ function CreateBubbles() {
         moveBubbles(Bubbles);
     });
     container.appendChild(Bubbles);
-    console.log("Bubbles created");
 }
 
 function moveBubbles(Bubbles) {
@@ -60,8 +59,8 @@ function moveBubbles(Bubbles) {
         // Update the bubble's position using CSS variables
         Bubbles.style.setProperty('--PosX', `${randomX}px`);
         Bubbles.style.setProperty('--PosY', `${randomY}px`);
-        console.log("New position of bubble added");
 }
+
 
 
 
